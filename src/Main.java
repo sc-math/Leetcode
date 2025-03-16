@@ -3,22 +3,10 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Sudoku_Solver_37 test = new Sudoku_Solver_37();
 
-        char[][] board = new char[][]{
-                {'.', '.', '.', '.', '5', '.', '.', '1', '.'},
-                {'.', '4', '.', '3', '.', '.', '.', '.', '.'},
-                {'.', '.', '.', '.', '.', '3', '.', '.', '1'},
-                {'8', '.', '.', '.', '.', '.', '.', '2', '.'},
-                {'.', '.', '2', '.', '7', '.', '.', '.', '.'},
-                {'.', '1', '5', '.', '.', '.', '.', '.', '.'},
-                {'.', '.', '.', '.', '.', '2', '.', '.', '.'},
-                {'.', '2', '.', '9', '.', '.', '.', '.', '.'},
-                {'.', '.', '4', '.', '.', '.', '.', '.', '.'}
-        };
+        Longest_Consecutive_Sequence_128 test = new Longest_Consecutive_Sequence_128();
 
-
-        test.solveSudoku(board);
+        System.out.println(test.longestConsecutive(new int[]{0,-1}));
     }
 }
 
