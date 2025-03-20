@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        Longest_Consecutive_Sequence_128 test = new Longest_Consecutive_Sequence_128();
+        Basic_Calculator_224 test = new Basic_Calculator_224();
 
-        System.out.println(test.longestConsecutive(new int[]{0,-1}));
+        System.out.println(test.calculate("(1+(4+5+2)-3)+(6+8)"));
     }
 }
 
