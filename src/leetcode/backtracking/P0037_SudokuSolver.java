@@ -1,6 +1,25 @@
-import java.util.Arrays;
+package leetcode.backtracking;
 
-public class Sudoku_Solver_37 {
+/*
+37. Sudoku Solver
+
+Pattern: Backtracking
+
+Time: O(9^n²)
+Space: O(n²)
+
+Idea:
+- percorrer o tabuleiro célula por célula
+- quando encontrar '.', tentar números de 1 a 9
+- validar se o número respeita linha, coluna e box
+- continuar recursivamente
+- se nenhuma opção funcionar, desfazer (backtrack)
+
+Key trick:
+tentar uma escolha, avançar na recursão e desfazer se levar a um estado inválido
+*/
+
+public class P0037_SudokuSolver {
     public void solveSudoku(char[][] board) {
         completeSudoku(board, 0);
 

@@ -1,6 +1,25 @@
+package leetcode.array;
+
+/*
+36. Valid Sudoku
+
+Pattern: Frequency Count / Matrix traversal
+
+Time: O(n²)
+Space: O(1)
+
+Idea:
+- verificar se cada número aparece apenas uma vez
+- checar linhas, colunas e subgrids 3x3
+- usar array de frequência para detectar duplicatas
+
+Key trick:
+reutilizar um array de contagem para cada linha, coluna e box
+*/
+
 import java.util.Arrays;
 
-public class Valid_Sudoku_36 {
+public class P0036_ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         int [] nums = new int [9];
 
@@ -15,7 +34,6 @@ public class Valid_Sudoku_36 {
                     nums[num-1]++;
                 }
             }
-
             Arrays.fill(nums, 0);
         }
 
@@ -30,7 +48,6 @@ public class Valid_Sudoku_36 {
                     nums[num-1]++;
                 }
             }
-
             Arrays.fill(nums, 0);
         }
 
@@ -50,7 +67,6 @@ public class Valid_Sudoku_36 {
                     }
                 }
             }
-
             Arrays.fill(nums, 0);
         }
 

@@ -1,6 +1,25 @@
+package leetcode.stack;
+
+/*
+20. Valid Parentheses
+
+Pattern: Stack
+
+Time: O(n)
+Space: O(n)
+
+Idea:
+- percorrer a string
+- empilhar parênteses de abertura
+- quando aparecer um de fechamento, verificar se corresponde ao topo da stack
+
+Key trick:
+usar a stack para garantir que os fechamentos aconteçam na ordem correta
+*/
+
 import java.util.Stack;
 
-public class valid_parentheses_20 {
+public class P0020_ValidParentheses {
     public boolean isValid(String s){
 
         Stack<Character> stack = new Stack<>();

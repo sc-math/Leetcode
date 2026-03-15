@@ -1,6 +1,26 @@
+package leetcode.hash;
+
+/*
+49. Group Anagrams
+
+Pattern: HashMap / Grouping by canonical form
+
+Time: O(n * k log k)
+Space: O(n * k)
+
+Idea:
+- duas palavras são anagramas se a versão ordenada delas for igual
+- ordenar cada palavra para gerar uma "assinatura"
+- usar a assinatura como chave em um HashMap
+- agrupar todas as palavras com mesma assinatura
+
+Key trick:
+usar a palavra ordenada como chave para agrupar os anagramas
+*/
+
 import java.util.*;
 
-public class Group_Anagrams_49 {
+public class P0049_GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> map = new HashMap<>();
         for (String str : strs) {

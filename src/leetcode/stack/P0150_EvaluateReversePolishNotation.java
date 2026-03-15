@@ -1,7 +1,27 @@
+package leetcode.stack;
+
+/*
+150. Evaluate Reverse Polish Notation
+
+Pattern: Stack / Expression Evaluation
+
+Time: O(n)
+Space: O(n)
+
+Idea:
+- percorrer os tokens da expressão
+- números são empilhados
+- operadores removem dois números da pilha
+- aplicar operação e empilhar o resultado
+
+Key trick:
+a ordem importa para - e / (segundo pop é o primeiro operando)
+*/
+
 import java.util.Objects;
 import java.util.Stack;
 
-public class Evaluate_Reverse_Polish_Notation_150 {
+public class P0150_EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
         Stack<Integer> nums = new Stack<>();
 

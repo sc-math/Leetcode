@@ -1,6 +1,25 @@
+package leetcode.stack;
+
+/*
+739. Daily Temperatures
+
+Pattern: Monotonic Stack / Next Greater Element
+
+Time: O(n)
+Space: O(n)
+
+Idea:
+- usar stack para manter índices de temperaturas decrescentes
+- quando encontrar uma temperatura maior, pop e calcula diferença de índices
+- repete para todo o array
+
+Key trick:
+pilha monotônica mantém a ordem decrescente para calcular o próximo maior elemento em O(n)
+*/
+
 import java.util.Stack;
 
-public class Daily_Temperatures_739 {
+public class P0739_DailyTemperatures {
     public int[] dailyTemperatures(int[] temperatures) {
 
         Stack<Integer> stack = new Stack<>();

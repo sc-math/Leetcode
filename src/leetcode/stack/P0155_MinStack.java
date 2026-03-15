@@ -1,17 +1,36 @@
+package leetcode.stack;
+
+/*
+155. Min Stack
+
+Pattern: Stack / Design Data Structure
+
+Time: O(1) for all operations
+Space: O(n)
+
+Idea:
+- usar duas pilhas
+- uma para os valores
+- outra para armazenar os mínimos históricos
+
+Key trick:
+quando um novo valor é <= mínimo atual, empilhar também na minStack
+*/
+
 import java.util.Stack;
 
-public class min_stack_155 {
+public class P0155_MinStack {
     Stack<Integer> stack;
     Stack<Integer> minStack;
 
-    public min_stack_155() {
+    public P0155_MinStack() {
         stack = new Stack<>();
         minStack = new Stack<>();
     }
 
     public void push(int val) {
         stack.push(val);
-        if(val <= minStack.peek() || minStack.isEmpty()){
+        if(minStack.isEmpty() || val <= minStack.peek()){
             minStack.push(val);
         }
     }

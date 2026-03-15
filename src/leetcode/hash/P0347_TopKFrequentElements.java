@@ -1,6 +1,26 @@
+package leetcode.hash;
+
+/*
+347. Top K Frequent Elements
+
+Pattern: HashMap + Sorting
+
+Time: O(n log n)
+Space: O(n)
+
+Idea:
+- contar frequência dos números usando HashMap
+- converter para lista de pares (num, freq)
+- ordenar pela frequência em ordem decrescente
+- retornar os k elementos mais frequentes
+
+Key trick:
+ordenar pelos valores do mapa
+*/
+
 import java.util.*;
 
-class Top_K_Frequent_Elements_347 {
+class P0347_TopKFrequentElements {
     public int[] topKFrequent(int[] nums, int k) {
 
         Map<Integer, Integer> mp = new HashMap<>();

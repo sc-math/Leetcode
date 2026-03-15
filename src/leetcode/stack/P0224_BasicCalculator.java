@@ -1,7 +1,27 @@
-import java.util.*;
-import java.util.regex.*;
+package leetcode.stack;
 
-public class Basic_Calculator_224 {
+/*
+224. Basic Calculator
+
+Pattern: Stack / Expression Parsing
+
+Time: O(n)
+Space: O(n)
+
+Idea:
+- percorrer a expressão caractere por caractere
+- construir números completos
+- aplicar sinais (+ ou -)
+- usar stack para salvar contexto quando encontrar '('
+
+Key trick:
+ao fechar ')', multiplicar o resultado interno pelo sinal anterior
+e somar ao resultado anterior
+*/
+
+import java.util.*;
+
+public class P0224_BasicCalculator {
     public int calculate(String s) {
 
         int size = s.length();

@@ -1,6 +1,25 @@
+package leetcode.hash;
+
+/*
+242. Valid Anagram
+
+Pattern: Hash Table / Frequency Count
+
+Time: O(n)
+Space: O(1)
+
+Idea:
+- contar frequência das letras da primeira string
+- subtrair frequência usando a segunda string
+- se todas as contagens terminarem em 0, é um anagrama
+
+Key trick:
+usar array de tamanho 26 para mapear letras 'a' → 'z'
+*/
+
 import java.util.Arrays;
 
-public class Valid_Anagram_242 {
+public class P0242_ValidAnagram {
     public boolean isAnagram(String s, String t) {
 
         int[] alphabet = new int[26];
