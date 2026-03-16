@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.matrix;
 
 /*
 2965. Find the Repeated and Missing Values

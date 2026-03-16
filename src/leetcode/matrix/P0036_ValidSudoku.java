@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.matrix;
 
 /*
 36. Valid Sudoku
