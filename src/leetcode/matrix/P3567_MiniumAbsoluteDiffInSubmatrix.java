@@ -5,7 +5,7 @@ package leetcode.matrix;
 
 Pattern: Matrix / Sorting
 
-Time: O((n * m) * (k^2 log(k^2)))
+Time: O((n* m) * (k^2 log(k)))
 Space: O(k^2)
 
 Idea:
